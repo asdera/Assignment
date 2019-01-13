@@ -1,0 +1,16 @@
+<p>
+  meet works!
+</p>
+Name: <input (keyup)="onKey($event)" value="abby">
+<table class="container" *ngFor="let note of notes | async">
+  <tr>
+      <th class=tim>{{ room | uppercase}}</th><th class="tim" *ngFor="let day of note.monday | keyvalue">Period: {{ day.key | uppercase}}</th>
+  </tr>
+  <tr><th>Monday</th><td (click)="updateData($event)" d="monday" [attr.p]="day.key" class="tim" [attr.density]="day.value.length" *ngFor="let day of note.monday | keyvalue">{{ day.value }}</td></tr>
+  <tr><th>Tuesday</th><td (click)="updateData($event)" d="tuesday" [attr.p]="day.key" class="tim" [attr.density]="day.value.length" *ngFor="let day of note.tuesday | keyvalue">{{ day.value }}</td></tr>
+  <tr><th>Wednesday</th><td (click)="updateData($event)" d="wednesday" [attr.p]="day.key" class="tim" [attr.density]="day.value.length" *ngFor="let day of note.wednesday | keyvalue">{{ day.value }}</td></tr>
+  <tr><th>Thursday</th><td (click)="updateData($event)" d="thursday" [attr.p]="day.key" class="tim" [attr.density]="day.value.length" *ngFor="let day of note.thursday | keyvalue">{{ day.value }}</td></tr>
+  <tr><th>Friday</th><td (click)="updateData($event)" d="friday" [attr.p]="day.key" class="tim" [attr.density]="day.value.length" *ngFor="let day of note.friday | keyvalue">{{ day.value }}</td></tr>
+  <tr><th>Saturday</th><td (click)="updateData($event)" d="saturday" [attr.p]="day.key" class="tim" [attr.density]="day.value.length" *ngFor="let day of note.saturday | keyvalue">{{ day.value }}</td></tr>
+  <tr><th>Sunday</th><td (click)="updateData($event)" d="sunday" [attr.p]="day.key" class="tim" [attr.density]="day.value.length" *ngFor="let day of note.sunday | keyvalue">{{ day.value }}</td></tr>
+</table>

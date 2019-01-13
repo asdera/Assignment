@@ -1,0 +1,23 @@
+[density="1"] { 
+    background-color: lightblue;
+}
+
+[density="2"] { 
+    background-color: rgb(104, 104, 255);
+}
+[density="3"] { 
+    background-color: blue;
+}
+
+.container {
+    display: flex;
+}
+
+.tim { 
+    width: 200px;
+    height: 200px;
+}
+
+table, th, tr, td {
+    border: 1px solid black;
+}
